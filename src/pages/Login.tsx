@@ -13,17 +13,17 @@ export default function Login() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if ((email === 'afrith' && password === 'afrith123') || (email === 'admin' && password === 'admin123')) {
+    if ((email === 'srm' && password === 'srm@1234') || (email === 'admin' && password === 'admin123')) {
       setLoading(true);
       setTimeout(() => {
-        setUser({ name: 'Afrith', email: 'afrith@supplyhub.com', hotelName: 'Demo Hotel', role: email === 'admin' ? 'admin' : 'user' });
+        setUser({ name: 'SRM Hotel Manager', email: 'srm@supplyhub.com', hotelName: 'SRM Hotel', role: email === 'admin' ? 'admin' : 'user' });
         navigate('/dashboard');
       }, 800);
     } else {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-        alert('Invalid credentials! Use username: afrith, password: afrith123');
+        alert('Invalid credentials! Use username: srm, password: srm@1234');
       }, 500);
     }
   };
